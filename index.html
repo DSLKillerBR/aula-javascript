@@ -3,14 +3,29 @@
     <head>
         <title>Minha página</title>
         <meta charset="utf-8">
-        <script type="text/javascript" src="js/main.js"></script> 
+       <script type="text/javascript" src="js/main.js"></script>
         <!-- agora o arquivo .JS é lido -->
     </head>
-    <body>
+    <body onload="load()"> <!-- chama uma função quando carregar o body -->
        <!-- <script> 
         //tudo que tiver dentro da tag script, é JAVASCRIPT
             alert("abre um pop-up")
         </script>-->
-        <h1>Breno Pinheiro de Oliveira</h1>
+        <button type="button" onclick="botao()"> Clique Aqui </button>
+        <!-- com a função "onclick", você ativa algo após o clique-->
+        <p id="agradecimento"></p>
+        <button type="button" onclick="redirecionar()"> Voltar </button>
+        <p id="mousemove" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+        <!-- Quando passa o mouse, ativa a função "trocar", e quando tira o 
+             mouse, ativa a função "voltar" -->
+        <!-- Usando o (this), ativa a função apenas para o elemento correto-->
+        <p onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+        <p onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+        <select onchange="funcaoChange(this)"> <!-- Quando muda a escolha, ele ativa a função -->
+            <option value="1">Valor 1</option>
+            <option value="2">Valor 2</option>
+            <option value="3">Valor 3</option>
+        </select>
+    
     </body>
 </html>
